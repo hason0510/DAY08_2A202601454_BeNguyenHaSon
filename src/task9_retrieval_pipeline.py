@@ -103,7 +103,7 @@ def retrieve(
         item["source"] = "hybrid"
 
     # Step 3: Rerank (mặc định RRF; có thể đổi sang cross_encoder / mmr qua RERANK_METHOD)
-    if use_reranking and merged:
+    if use_reranking and merged and RERANK_METHOD != "rrf":
         final_results = rerank(query, merged, top_k=top_k, method=RERANK_METHOD)
         for item in final_results:
             item.setdefault("source", "hybrid")
