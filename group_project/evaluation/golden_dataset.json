@@ -73,5 +73,30 @@
     "question": "Nếu trả bằng thẻ tín dụng thì phí là bao nhiêu?",
     "expected_answer": "Phí cố định là 10,000 VNĐ cho mỗi giao dịch qua thẻ tín dụng, bên cạnh phí sàn 5%.",
     "expected_context": "product_listing.md"
+  },
+  {
+    "question": "Có những khoản phí nào tôi phải trả nếu tôi là người bán và khách hàng thanh toán bằng thẻ tín dụng?",
+    "expected_answer": "Bạn sẽ phải chịu phí sàn 5% trên mỗi đơn hàng thành công và cộng thêm phí cố định 10,000 VNĐ cho giao dịch qua thẻ tín dụng.",
+    "expected_context": "product_listing.md, payment_methods.md"
+  },
+  {
+    "question": "Để trả lại thực phẩm tươi sống, tôi cần những điều kiện gì và có bao nhiêu thời gian để thực hiện?",
+    "expected_answer": "Bạn chỉ có 24 giờ kể từ khi giao hàng thành công để yêu cầu trả lại thực phẩm tươi sống. Hàng hóa phải nguyên vẹn, giữ nguyên tem mác và bạn cần cung cấp video mở hộp làm bằng chứng.",
+    "expected_context": "returns_refund.md"
+  },
+  {
+    "question": "Shopee sẽ làm gì với địa chỉ email và số điện thoại của tôi?",
+    "expected_answer": "Shopee thu thập thông tin này để phục vụ cho việc xử lý đơn hàng và cam kết không chia sẻ cho bên thứ ba vì mục đích thương mại mà không có sự đồng ý của bạn.",
+    "expected_context": "privacy_policy.md"
+  },
+  {
+    "question": "Tôi có thể thay đổi địa chỉ giao hàng cho đơn hàng thanh toán bằng Apple Pay khi đơn đã được giao cho vận chuyển không?",
+    "expected_answer": "Không, nếu đơn hàng đã được giao cho đơn vị vận chuyển, bạn không thể thay đổi địa chỉ giao hàng, bất kể phương thức thanh toán là gì.",
+    "expected_context": "track_order.md, payment_methods.md"
+  },
+  {
+    "question": "Tôi có được phép đăng bán động vật hoang dã và yêu cầu khách thanh toán COD không?",
+    "expected_answer": "Không, động vật hoang dã nằm trong danh sách các mặt hàng cấm đăng bán trên sàn.",
+    "expected_context": "product_listing.md, payment_methods.md"
   }
 ]

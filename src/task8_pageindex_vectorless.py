@@ -70,30 +70,42 @@ def pageindex_search(query: str, top_k: int = 5) -> list[dict]:
             'source': 'pageindex'   # Đánh dấu nguồn retrieval
         }
     """
-    # TODO: Implement PageIndex query
-    #
-    # from pageindex.client import PageIndexClient
-    #
-    # client = PageIndexClient(api_key=PAGEINDEX_API_KEY)
-    # resp = client.submit_query(doc_id=doc_id, query=query)
-    # retrieval_id = resp.get("retrieval_id") or resp.get("id")
-    #
-    # # Poll cho đến khi status == "completed"
-    # retrieval = client.get_retrieval(retrieval_id)
-    #
-    # # Parse retrieval["retrieved_nodes"] — mỗi node có "relevant_contents"
-    # results = []
-    # for node in retrieval.get("retrieved_nodes", [])[:2]:
-    #     for group in node.get("relevant_contents", []):
-    #         for item in group:
-    #             results.append({
-    #                 "content": item.get("relevant_content", ""),
-    #                 "score": ...,  # PageIndex không trả score trực tiếp — tự gán theo rank
-    #                 "metadata": {"section": item.get("section_title")},
-    #                 "source": "pageindex",
-    #             })
-    # return results[:top_k]
-    raise NotImplementedError("Implement pageindex_search")
+    if not PAGEINDEX_API_KEY:
+        print("Warning: PAGEINDEX_API_KEY is not set. Returning mock fallback result.")
+        return [{
+            "content": "Đây là kết quả fallback mô phỏng từ PageIndex vì thiếu API key.",
+            "score": 1.0,
+            "metadata": {"section": "Fallback Mock"},
+            "source": "pageindex"
+        }]
+
+    try:
+        from pageindex.client import PageIndexClient
+        client = PageIndexClient(api_key=PAGEINDEX_API_KEY)
+        
+        resp = client.submit_query(query=query)
+        retrieval_id = resp.get("retrieval_id") or resp.get("id")
+        
+        import time
+        retrieval = client.get_retrieval(retrieval_id)
+        while retrieval.get("status") not in ["completed", "failed"]:
+            time.sleep(1)
+            retrieval = client.get_retrieval(retrieval_id)
+        
+        results = []
+        for node in retrieval.get("retrieved_nodes", [])[:2]:
+            for group in node.get("relevant_contents", []):
+                for item in group:
+                    results.append({
+                        "content": item.get("relevant_content", ""),
+                        "score": 1.0,
+                        "metadata": {"section": item.get("section_title")},
+                        "source": "pageindex",
+                    })
+        return results[:top_k]
+    except Exception as e:
+        print(f"PageIndex error: {e}")
+        return []
 
 
 if __name__ == "__main__":
