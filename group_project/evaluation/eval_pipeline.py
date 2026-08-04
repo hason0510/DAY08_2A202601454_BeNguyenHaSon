@@ -384,7 +384,7 @@ def _find_worst_performers(comparison: dict) -> list[dict]:
         recall = item.get("context_recall", 0.0) or 0.0
         avg = (faith + rel + recall) / 3.0
         scored.append({
-            "question": item.get("question", "N/A"),
+            "question": item.get("user_input", item.get("question", "N/A")),
             "faithfulness": faith,
             "relevance": rel,
             "recall": recall,
