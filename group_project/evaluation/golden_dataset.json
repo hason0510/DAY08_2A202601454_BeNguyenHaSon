@@ -2,16 +2,76 @@
   {
     "question": "Người mua có thể yêu cầu trả hàng/hoàn tiền trong thời hạn bao lâu sau khi nhận hàng?",
     "expected_answer": "Trong vòng 15 ngày kể từ khi giao hàng thành công (24 giờ đối với thực phẩm tươi sống/đông lạnh).",
-    "expected_context": "Trang Returns and Refunds Policy, mục Return/Refund Eligibility"
+    "expected_context": "returns_refund.md"
+  },
+  {
+    "question": "Điều kiện nào để có thể trả hàng?",
+    "expected_answer": "Hàng hóa phải còn nguyên vẹn, chưa qua sử dụng, giữ nguyên tem mác và cần cung cấp video mở hộp làm bằng chứng.",
+    "expected_context": "returns_refund.md"
   },
   {
     "question": "Shopee hỗ trợ những phương thức thanh toán nào?",
     "expected_answer": "ShopeePay Wallet, thẻ tín dụng/ghi nợ, trả góp qua thẻ, QR Code, chuyển khoản qua app ngân hàng, thẻ NAPAS, Apple Pay, Google Pay, và COD.",
-    "expected_context": "Trang Payment Methods Overview"
+    "expected_context": "payment_methods.md"
   },
   {
     "question": "Người bán không được đăng bán những sản phẩm nào?",
-    "expected_answer": "Hàng giả/nhái, sản phẩm bất hợp pháp, vi phạm sở hữu trí tuệ, và các mặt hàng nằm trong danh sách cấm của sàn.",
-    "expected_context": "Trang Product Listing Regulations, mục Prohibited Content"
+    "expected_answer": "Hàng giả/nhái, sản phẩm bất hợp pháp, vi phạm sở hữu trí tuệ, và các mặt hàng nằm trong danh sách cấm của sàn (như vũ khí, chất nổ, ma túy, động vật hoang dã).",
+    "expected_context": "product_listing.md"
+  },
+  {
+    "question": "Phí sàn cho người bán là bao nhiêu?",
+    "expected_answer": "Người bán sẽ phải chịu phí sàn 5% trên mỗi đơn hàng thành công, và phí cố định 10,000 VNĐ cho mỗi giao dịch qua thẻ tín dụng.",
+    "expected_context": "product_listing.md"
+  },
+  {
+    "question": "Làm thế nào để kiểm tra tình trạng đơn hàng?",
+    "expected_answer": "Bạn có thể truy cập vào mục \"Đơn mua\" trên ứng dụng Shopee. Trạng thái sẽ được cập nhật liên tục từ \"Chờ xác nhận\" đến \"Đang giao\".",
+    "expected_context": "track_order.md"
+  },
+  {
+    "question": "Tôi có thể thay đổi địa chỉ giao hàng không?",
+    "expected_answer": "Bạn có thể thay đổi địa chỉ giao hàng một lần duy nhất khi đơn hàng ở trạng thái \"Chờ xác nhận\".",
+    "expected_context": "track_order.md"
+  },
+  {
+    "question": "Shopee thu thập những dữ liệu cá nhân nào?",
+    "expected_answer": "Shopee thu thập các thông tin cơ bản của người dùng như tên, địa chỉ email, số điện thoại và địa chỉ giao hàng.",
+    "expected_context": "privacy_policy.md"
+  },
+  {
+    "question": "Thông tin cá nhân có được chia sẻ cho bên thứ ba không?",
+    "expected_answer": "Shopee cam kết không chia sẻ thông tin cá nhân cho bên thứ ba vì mục đích thương mại mà không có sự đồng ý của người dùng.",
+    "expected_context": "privacy_policy.md"
+  },
+  {
+    "question": "Nếu đơn hàng đã được giao cho vận chuyển thì có đổi địa chỉ được không?",
+    "expected_answer": "Nếu đơn hàng đã được giao cho đơn vị vận chuyển, bạn không thể thay đổi địa chỉ.",
+    "expected_context": "track_order.md"
+  },
+  {
+    "question": "Mua thực phẩm tươi sống thì có được trả hàng không?",
+    "expected_answer": "Bạn có thể trả hàng nhưng phải yêu cầu trong vòng 24 giờ kể từ khi giao hàng thành công.",
+    "expected_context": "returns_refund.md"
+  },
+  {
+    "question": "Video mở hộp có bắt buộc không khi trả hàng?",
+    "expected_answer": "Có, người mua cần cung cấp video mở hộp làm bằng chứng.",
+    "expected_context": "returns_refund.md"
+  },
+  {
+    "question": "Thanh toán bằng thẻ Apple Pay có được không?",
+    "expected_answer": "Có, Shopee hỗ trợ thanh toán bằng Apple Pay.",
+    "expected_context": "payment_methods.md"
+  },
+  {
+    "question": "Có bán động vật hoang dã trên Shopee được không?",
+    "expected_answer": "Không, động vật hoang dã nằm trong danh sách cấm của sàn.",
+    "expected_context": "product_listing.md"
+  },
+  {
+    "question": "Nếu trả bằng thẻ tín dụng thì phí là bao nhiêu?",
+    "expected_answer": "Phí cố định là 10,000 VNĐ cho mỗi giao dịch qua thẻ tín dụng, bên cạnh phí sàn 5%.",
+    "expected_context": "product_listing.md"
   }
 ]
