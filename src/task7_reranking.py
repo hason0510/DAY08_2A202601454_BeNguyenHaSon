@@ -99,10 +99,11 @@ def rerank(
     elif method == "mmr":
         raise NotImplementedError("Call rerank_mmr with query_embedding")
     elif method == "rrf":
-        raise NotImplementedError(
-            "Đối với RRF, hãy gọi trực tiếp hàm `rerank_rrf([list1, list2])` "
-            "thay vì dùng interface chung này vì RRF cần nhiều list đầu vào."
-        )
+        # RRF vốn để gộp NHIỀU ranked list. Interface chung này chỉ nhận một
+        # danh sách candidates, nên bọc thành list-của-list: RRF với 1 ranker
+        # giữ nguyên thứ tự và gán lại điểm theo thứ hạng 1/(k + rank).
+        # Task 9 vẫn gọi thẳng rerank_rrf([dense_results, sparse_results]).
+        return rerank_rrf([candidates], top_k=top_k)
     else:
         raise ValueError(f"Unknown rerank method: {method}")
 
