@@ -114,6 +114,9 @@ def load_documents() -> list[dict]:
     STANDARDIZED_DIR.mkdir(parents=True, exist_ok=True)
     
     for md_file in STANDARDIZED_DIR.rglob("*.md"):
+        # README chỉ mô tả cấu trúc dữ liệu, không phải tài liệu nguồn cho RAG.
+        if md_file.name.lower() == "readme.md":
+            continue
         content = md_file.read_text(encoding="utf-8")
         # Phân loại dựa trên tên thư mục chứa nó nếu có
         doc_type = "legal" if "legal" in str(md_file) else "news"
