@@ -14,60 +14,114 @@ BM25 hoạt động thế nào:
     - Formula: score(q,d) = Σ IDF(qi) * (tf(qi,d) * (k1+1)) / (tf(qi,d) + k1*(1-b+b*|d|/avgdl))
     - k1=1.5 (term saturation), b=0.75 (length normalization)
 """
+"""
+Task 6 — Lexical Search Module (BM25).
 
-from rank_bm25 import BM25Okapi
-import numpy as np
+Cài đặt trước khi chạy:
+    pip install rank-bm25 numpy
+"""
+
+import sys
 from pathlib import Path
+import numpy as np
+from rank_bm25 import BM25Okapi
 
-def _load_corpus_from_standardized():
-    docs = []
-    standardized_dir = Path(__file__).parent.parent / "data" / "standardized"
-    for md_file in standardized_dir.rglob("*.md"):
-        content = md_file.read_text(encoding="utf-8")
-        doc_type = "legal" if "legal" in str(md_file) else "news"
-        # Dummy customer_role
-        role = "buyer"
-        if "seller" in md_file.name: role = "seller"
-        elif "privacy" in md_file.name: role = "both"
-        docs.append({
-            "content": content,
-            "metadata": {"source": md_file.name, "type": doc_type, "customer_role": role}
-        })
-    return docs
+# Xử lý import để tương thích cả khi chạy trực tiếp file và khi chạy qua module
+if __package__ is None:
+    sys.path.insert(0, str(Path(__file__).parent))
+    from task4_chunking_indexing import load_documents, chunk_documents
+else:
+    from src.task4_chunking_indexing import load_documents, chunk_documents
 
-CORPUS = _load_corpus_from_standardized()
-_tokenized_corpus = [doc["content"].lower().split() for doc in CORPUS]
-bm25 = BM25Okapi(_tokenized_corpus) if _tokenized_corpus else None
+# Biến toàn cục lưu trữ corpus và model BM25
+CORPUS: list[dict] = []
+bm25_model = None
 
-def build_bm25_index(corpus: list[dict]):
-    global CORPUS, bm25
-    CORPUS = corpus
-    tokenized_corpus = [doc["content"].lower().split() for doc in corpus]
-    bm25 = BM25Okapi(tokenized_corpus)
-    return bm25
+
+def init_bm25():
+    """
+    Nạp dữ liệu thật từ Task 4 và xây dựng BM25 Index trên các chunks.
+    Điều này đảm bảo Lexical Search và Semantic Search dùng chung một tập dữ liệu,
+    giúp việc reranking (RRF) ở Task 7 chính xác.
+    """
+    global CORPUS, bm25_model
+    
+    print("Đang khởi tạo BM25 Index từ dữ liệu gốc...")
+    
+    # Load và chunk tài liệu giống hệt cách ChromaDB làm ở Task 4
+    docs = load_documents()
+    if not docs:
+        print("⚠ Không tìm thấy tài liệu nào để build BM25. Hãy kiểm tra data/standardized/.")
+        return
+        
+    CORPUS = chunk_documents(docs)
+    
+    # Tokenize đơn giản bằng cách tách từ (split) và chuyển thành chữ thường (lower)
+    tokenized_corpus = [doc["content"].lower().split() for doc in CORPUS]
+    bm25_model = BM25Okapi(tokenized_corpus)
+    print(f"✓ BM25 Index đã sẵn sàng với {len(CORPUS)} chunks.")
+
 
 def lexical_search(query: str, top_k: int = 10) -> list[dict]:
-    if not bm25:
-        return []
-        
-    tokenized_query = query.lower().split()
-    scores = bm25.get_scores(tokenized_query)
+    """
+    Tìm kiếm từ khóa sử dụng BM25.
+
+    Args:
+        query: Câu truy vấn
+        top_k: Số lượng kết quả tối đa
+
+    Returns:
+        List of {
+            'content': str,
+            'score': float,      # BM25 score
+            'metadata': dict
+        }
+        Sorted by score descending.
+    """
+    global bm25_model
     
+    # Tự động init nếu chưa có model
+    if bm25_model is None:
+        init_bm25()
+        
+    # Nếu vẫn None (do không có data), trả về list rỗng
+    if bm25_model is None:
+        return []
+
+    tokenized_query = query.lower().split()
+    scores = bm25_model.get_scores(tokenized_query)
+    
+    # Lấy ra index của top_k kết quả có điểm cao nhất
     top_indices = np.argsort(scores)[::-1][:top_k]
     
     results = []
     for idx in top_indices:
+        # Chỉ lấy những kết quả có điểm BM25 > 0 (tức là có chứa ít nhất 1 từ khóa)
         if scores[idx] > 0:
             results.append({
                 "content": CORPUS[idx]["content"],
                 "score": float(scores[idx]),
                 "metadata": CORPUS[idx]["metadata"]
             })
+            
     return results
 
 
 if __name__ == "__main__":
-    # Test
-    results = lexical_search("phương thức thanh toán shopee", top_k=5)
-    for r in results:
-        print(f"[{r['score']:.3f}] {r['content'][:100]}...")
+    print("=" * 60)
+    print("TESTING TASK 6: BM25 LEXICAL SEARCH (REAL DATA)")
+    print("=" * 60)
+    
+    test_query = "phương thức thanh toán shopee"
+    print(f"\nQuery: '{test_query}'\n")
+    
+    results = lexical_search(test_query, top_k=3)
+    
+    if not results:
+        print("Không tìm thấy kết quả phù hợp hoặc chưa có dữ liệu.")
+    else:
+        for r in results:
+            print(f"Score: [{r['score']:.3f}]")
+            print(f"Metadata: {r['metadata']}")
+            print(f"Content: {r['content'][:150]}...\n")
+            print("-" * 40)
