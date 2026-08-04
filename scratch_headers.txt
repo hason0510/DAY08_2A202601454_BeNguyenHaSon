@@ -1,0 +1,30 @@
+--- data/standardized\legal\chinh-sach-bao-mat-hoc-vien-shopee-shopee-uni-vietnam.md ---
+--- title: "CHÍNH SÁCH BẢO MẬT Học viện Shopee - Shopee Uni Vietnam" source_file: "CHÍNH SÁCH BẢO MẬT _ Học viện Shopee - Shopee Uni Vietnam.pdf" source_type: "legal" customer_role: "both" topic: "privacy_policy" converted_at: "2026-08-04T15:29:16+07:00" --- # CHÍNH SÁCH BẢO MẬT Học viện Shopee - Sh
+
+--- data/standardized\legal\chinh-sach-chong-hanh-vi-gian-lan-doi-voi-hoat-dong-tiep-thi-lien-ket-tren-san-thuong-mai-dien-tu-sh.md ---
+--- title: "CHÍNH SÁCH CHỐNG HÀNH VI GIAN LẬN ĐỐI VỚI HOẠT ĐỘNG TIẾP THỊ LIÊN KẾT TRÊN SÀN THƯƠNG MẠI ĐIỆN TỬ SHOPEE VÀ CÁC BIỆN PHÁP XỬ LÝ Học viện Shopee - Shopee Uni Viet" source_file: "CHÍNH SÁCH CHỐNG HÀNH VI GIAN LẬN ĐỐI VỚI HOẠT ĐỘNG TIẾP THỊ LIÊN KẾT TRÊN SÀN THƯƠNG MẠI ĐIỆN TỬ SHOPEE VÀ CÁC
+
+--- data/standardized\legal\chinh-sach-chung-ve-ma-uu-dai-shopee-shopee-trung-tam-tro-giup.md ---
+--- title: "CHÍNH SÁCH CHUNG VỀ MÃ ƯU ĐÃI SHOPEE Shopee Trung tâm trợ giúp" source_file: "CHÍNH SÁCH CHUNG VỀ MÃ ƯU ĐÃI SHOPEE _ Shopee Trung tâm trợ giúp.pdf" source_type: "legal" customer_role: "both" topic: "ecommerce_policy" converted_at: "2026-08-04T15:29:16+07:00" --- # CHÍNH SÁCH CHUNG VỀ MÃ 
+
+--- data/standardized\legal\chinh-sach-phi-van-chuyen-danh-cho-don-tra-hang-hoan-tien-va-don-giao-khong-thanh-cong-hoc-vien-shop.md ---
+--- title: "Chính sách phí vận chuyển dành cho đơn Trả Hàng Hoàn tiền và đơn giao không thành công Học Viện Shopee [Shopee]" source_file: "Chính sách phí vận chuyển dành cho đơn Trả Hàng_Hoàn tiền và đơn giao không thành công _ Học Viện Shopee [Shopee].pdf" source_type: "legal" customer_role: "both"
+
+--- data/standardized\legal\chinh-sach-tra-hang-va-hoan-tien-shopee-trung-tam-tro-giup.md ---
+--- title: "CHÍNH SÁCH TRẢ HÀNG VÀ HOÀN TIỀN Shopee Trung tâm trợ giúp" source_file: "CHÍNH SÁCH TRẢ HÀNG VÀ HOÀN TIỀN _ Shopee Trung tâm trợ giúp.pdf" source_type: "legal" customer_role: "both" topic: "returns_refund_policy" converted_at: "2026-08-04T15:29:19+07:00" --- # CHÍNH SÁCH TRẢ HÀNG VÀ HOÀ
+
+--- data/standardized\news\01-payment-methods.md ---
+--- title: "[Thành viên mới] Shopee hiện đang có những phương thức thanh toán nào?" source_url: "https://help.shopee.vn/portal/4/article/79198" source_file: "01_payment_methods.json" source_type: "news" customer_role: "buyer" topic: "payment_methods" date_crawled: "2026-08-04T15:19:35+07:00" convert
+
+--- data/standardized\news\02-change-payment-method.md ---
+--- title: "Hướng Dẫn Đổi Phương Thức Thanh Toán Cho Đơn Hàng Trả Trước" source_url: "https://help.shopee.vn/portal/4/article/79128" source_file: "02_change_payment_method.json" source_type: "news" customer_role: "buyer" topic: "change_payment_method" date_crawled: "2026-08-04T15:19:36+07:00" conver
+
+--- data/standardized\news\03-track-order.md ---
+--- title: "[Thành viên mới] Cách theo dõi tình trạng vận chuyển của đơn hàng?" source_url: "https://help.shopee.vn/portal/4/article/79215" source_file: "03_track_order.json" source_type: "news" customer_role: "buyer" topic: "order_tracking" date_crawled: "2026-08-04T15:19:36+07:00" converted_at: "2
+
+--- data/standardized\news\04-refund-evidence.md ---
+--- title: "[Trả hàng/ Hoàn tiền] Quy trình Shopee xử lý yêu cầu Trả hàng/ Hoàn tiền" source_url: "https://help.shopee.vn/portal/4/article/190242" source_file: "04_refund_evidence.json" source_type: "news" customer_role: "buyer" topic: "refund_evidence" date_crawled: "2026-08-04T15:19:43+07:00" conv
+
+--- data/standardized\news\05-cross-border-purchase.md ---
+--- title: "[Thành viên mới] Tôi có thể mua hàng trên Shopee của những quốc gia khác ngoài Việt Nam không?" source_url: "https://help.shopee.vn/portal/4/article/79377" source_file: "05_cross_border_purchase.json" source_type: "news" customer_role: "buyer" topic: "cross_border_purchase" date_crawled:
+

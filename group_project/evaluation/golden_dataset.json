@@ -1,102 +1,102 @@
 [
   {
-    "question": "Người mua có thể yêu cầu trả hàng/hoàn tiền trong thời hạn bao lâu sau khi nhận hàng?",
-    "expected_answer": "Trong vòng 15 ngày kể từ khi giao hàng thành công (24 giờ đối với thực phẩm tươi sống/đông lạnh).",
-    "expected_context": "returns_refund.md"
-  },
-  {
-    "question": "Điều kiện nào để có thể trả hàng?",
-    "expected_answer": "Hàng hóa phải còn nguyên vẹn, chưa qua sử dụng, giữ nguyên tem mác và cần cung cấp video mở hộp làm bằng chứng.",
-    "expected_context": "returns_refund.md"
-  },
-  {
     "question": "Shopee hỗ trợ những phương thức thanh toán nào?",
-    "expected_answer": "ShopeePay Wallet, thẻ tín dụng/ghi nợ, trả góp qua thẻ, QR Code, chuyển khoản qua app ngân hàng, thẻ NAPAS, Apple Pay, Google Pay, và COD.",
-    "expected_context": "payment_methods.md"
+    "expected_answer": "Shopee hỗ trợ 9 phương thức thanh toán: Ví ShopeePay, Thẻ tín dụng/ghi nợ, Trả góp bằng thẻ tín dụng, Thanh toán QR, Ứng dụng ngân hàng, Thẻ nội địa NAPAS, Apple Pay, Google Pay, và Thanh toán khi nhận hàng (COD), cùng với SPayLater.",
+    "expected_context": "01-payment-methods.md"
   },
   {
-    "question": "Người bán không được đăng bán những sản phẩm nào?",
-    "expected_answer": "Hàng giả/nhái, sản phẩm bất hợp pháp, vi phạm sở hữu trí tuệ, và các mặt hàng nằm trong danh sách cấm của sàn (như vũ khí, chất nổ, ma túy, động vật hoang dã).",
-    "expected_context": "product_listing.md"
+    "question": "Tôi có thể thanh toán đơn hàng trên Shopee bằng Apple Pay không? Giới hạn giá trị đơn hàng là bao nhiêu?",
+    "expected_answer": "Có, bạn có thể thanh toán bằng Apple Pay cho đơn hàng có giá trị từ 10.000 VNĐ đến 25.000.000 VNĐ.",
+    "expected_context": "01-payment-methods.md"
   },
   {
-    "question": "Phí sàn cho người bán là bao nhiêu?",
-    "expected_answer": "Người bán sẽ phải chịu phí sàn 5% trên mỗi đơn hàng thành công, và phí cố định 10,000 VNĐ cho mỗi giao dịch qua thẻ tín dụng.",
-    "expected_context": "product_listing.md"
+    "question": "Phương thức trả góp bằng Thẻ tín dụng có áp dụng cho đơn hàng quốc tế không?",
+    "expected_answer": "Không, phương thức Trả góp bằng Thẻ tín dụng KHÔNG áp dụng cho đơn hàng Quốc tế.",
+    "expected_context": "01-payment-methods.md"
   },
   {
-    "question": "Làm thế nào để kiểm tra tình trạng đơn hàng?",
-    "expected_answer": "Bạn có thể truy cập vào mục \"Đơn mua\" trên ứng dụng Shopee. Trạng thái sẽ được cập nhật liên tục từ \"Chờ xác nhận\" đến \"Đang giao\".",
-    "expected_context": "track_order.md"
+    "question": "Tôi có thể thay đổi phương thức thanh toán cho đơn hàng trả trước không và thay đổi được mấy lần?",
+    "expected_answer": "Bạn chỉ có thể thay đổi phương thức thanh toán 1 lần duy nhất cho mỗi đơn hàng nếu đơn hàng chưa được xác nhận thanh toán.",
+    "expected_context": "02-change-payment-method.md"
   },
   {
-    "question": "Tôi có thể thay đổi địa chỉ giao hàng không?",
-    "expected_answer": "Bạn có thể thay đổi địa chỉ giao hàng một lần duy nhất khi đơn hàng ở trạng thái \"Chờ xác nhận\".",
-    "expected_context": "track_order.md"
+    "question": "Làm thế nào để theo dõi tình trạng đơn hàng của tôi?",
+    "expected_answer": "Bạn có thể vào mục Đơn mua trên ứng dụng Shopee để xem cập nhật tình trạng giao hàng, từ Chờ xác nhận, Đang giao đến Đã giao.",
+    "expected_context": "03-track-order.md"
   },
   {
-    "question": "Shopee thu thập những dữ liệu cá nhân nào?",
-    "expected_answer": "Shopee thu thập các thông tin cơ bản của người dùng như tên, địa chỉ email, số điện thoại và địa chỉ giao hàng.",
-    "expected_context": "privacy_policy.md"
+    "question": "Tại sao tôi cần cung cấp bằng chứng khi yêu cầu Trả hàng/Hoàn tiền?",
+    "expected_answer": "Cung cấp bằng chứng đầy đủ (như video mở hộp) giúp Shopee và Người bán đánh giá chính xác tình trạng hàng hóa và xử lý yêu cầu nhanh chóng hơn.",
+    "expected_context": "04-refund-evidence.md"
   },
   {
-    "question": "Thông tin cá nhân có được chia sẻ cho bên thứ ba không?",
-    "expected_answer": "Shopee cam kết không chia sẻ thông tin cá nhân cho bên thứ ba vì mục đích thương mại mà không có sự đồng ý của người dùng.",
-    "expected_context": "privacy_policy.md"
+    "question": "Shopee có hỗ trợ mua hàng từ nước ngoài (Cross-border) không?",
+    "expected_answer": "Có, Shopee hỗ trợ người mua tại Việt Nam mua các sản phẩm từ nước ngoài nếu người bán có hỗ trợ vận chuyển quốc tế.",
+    "expected_context": "05-cross-border-purchase.md"
   },
   {
-    "question": "Nếu đơn hàng đã được giao cho vận chuyển thì có đổi địa chỉ được không?",
-    "expected_answer": "Nếu đơn hàng đã được giao cho đơn vị vận chuyển, bạn không thể thay đổi địa chỉ.",
-    "expected_context": "track_order.md"
+    "question": "Shopee sẽ xử lý thế nào nếu phát hiện hành vi gian lận trong chương trình Tiếp thị liên kết (Affiliate)?",
+    "expected_answer": "Shopee có thể khóa tài khoản, đóng băng số tiền hoa hồng chưa thanh toán, hoặc chấm dứt tư cách tham gia chương trình tùy mức độ vi phạm.",
+    "expected_context": "chinh-sach-chong-hanh-vi-gian-lan-doi-voi-hoat-dong-tiep-thi-lien-ket-tren-san-thuong-mai-dien-tu-sh.md"
   },
   {
-    "question": "Mua thực phẩm tươi sống thì có được trả hàng không?",
-    "expected_answer": "Bạn có thể trả hàng nhưng phải yêu cầu trong vòng 24 giờ kể từ khi giao hàng thành công.",
-    "expected_context": "returns_refund.md"
+    "question": "Mã ưu đãi (Voucher) trên Shopee có thể được quy đổi thành tiền mặt không?",
+    "expected_answer": "Mã ưu đãi (Voucher) không có giá trị quy đổi thành tiền mặt dưới mọi hình thức.",
+    "expected_context": "chinh-sach-chung-ve-ma-uu-dai-shopee-shopee-trung-tam-tro-giup.md"
   },
   {
-    "question": "Video mở hộp có bắt buộc không khi trả hàng?",
-    "expected_answer": "Có, người mua cần cung cấp video mở hộp làm bằng chứng.",
-    "expected_context": "returns_refund.md"
+    "question": "Shopee bảo mật thông tin cá nhân của người dùng như thế nào? Có chia sẻ cho bên thứ ba không?",
+    "expected_answer": "Shopee áp dụng các biện pháp bảo mật chặt chẽ để bảo vệ thông tin cá nhân. Thông tin chỉ được chia sẻ cho đối tác (như đơn vị vận chuyển) để xử lý đơn hàng, không bán cho bên thứ ba.",
+    "expected_context": "chinh-sach-bao-mat-hoc-vien-shopee-shopee-uni-vietnam.md"
   },
   {
-    "question": "Thanh toán bằng thẻ Apple Pay có được không?",
-    "expected_answer": "Có, Shopee hỗ trợ thanh toán bằng Apple Pay.",
-    "expected_context": "payment_methods.md"
+    "question": "Thời gian tối đa để yêu cầu trả hàng/hoàn tiền đối với hàng Shopee Mall là bao lâu?",
+    "expected_answer": "Bạn có thể yêu cầu trả hàng/hoàn tiền trong vòng 15 ngày đối với các sản phẩm thuộc Shopee Mall.",
+    "expected_context": "chinh-sach-tra-hang-va-hoan-tien-shopee-trung-tam-tro-giup.md"
   },
   {
-    "question": "Có bán động vật hoang dã trên Shopee được không?",
-    "expected_answer": "Không, động vật hoang dã nằm trong danh sách cấm của sàn.",
-    "expected_context": "product_listing.md"
+    "question": "Nếu tôi mua thực phẩm tươi sống thì có được áp dụng trả hàng hoàn tiền 15 ngày không?",
+    "expected_answer": "Đối với thực phẩm tươi sống/đông lạnh, thời gian yêu cầu trả hàng/hoàn tiền thường giới hạn trong 24 giờ sau khi nhận hàng thành công, không áp dụng 15 ngày.",
+    "expected_context": "chinh-sach-tra-hang-va-hoan-tien-shopee-trung-tam-tro-giup.md"
   },
   {
-    "question": "Nếu trả bằng thẻ tín dụng thì phí là bao nhiêu?",
-    "expected_answer": "Phí cố định là 10,000 VNĐ cho mỗi giao dịch qua thẻ tín dụng, bên cạnh phí sàn 5%.",
-    "expected_context": "product_listing.md"
+    "question": "Phí vận chuyển sẽ do ai chịu khi tôi yêu cầu trả hàng vì lý do hàng lỗi?",
+    "expected_answer": "Trường hợp hàng lỗi do nhà sản xuất hoặc do Người bán giao sai, Người bán sẽ chịu trách nhiệm thanh toán phí vận chuyển trả hàng.",
+    "expected_context": "chinh-sach-phi-van-chuyen-danh-cho-don-tra-hang-hoan-tien-va-don-giao-khong-thanh-cong-hoc-vien-shop.md"
   },
   {
-    "question": "Có những khoản phí nào tôi phải trả nếu tôi là người bán và khách hàng thanh toán bằng thẻ tín dụng?",
-    "expected_answer": "Bạn sẽ phải chịu phí sàn 5% trên mỗi đơn hàng thành công và cộng thêm phí cố định 10,000 VNĐ cho giao dịch qua thẻ tín dụng.",
-    "expected_context": "product_listing.md, payment_methods.md"
+    "question": "Ai sẽ chịu phí trả hàng nếu tôi từ chối nhận hàng vô cớ?",
+    "expected_answer": "Người mua sẽ phải chịu trách nhiệm bồi thường chi phí hoặc tài khoản có thể bị giới hạn tùy thuộc vào đánh giá hành vi cố ý không nhận hàng.",
+    "expected_context": "chinh-sach-phi-van-chuyen-danh-cho-don-tra-hang-hoan-tien-va-don-giao-khong-thanh-cong-hoc-vien-shop.md"
   },
   {
-    "question": "Để trả lại thực phẩm tươi sống, tôi cần những điều kiện gì và có bao nhiêu thời gian để thực hiện?",
-    "expected_answer": "Bạn chỉ có 24 giờ kể từ khi giao hàng thành công để yêu cầu trả lại thực phẩm tươi sống. Hàng hóa phải nguyên vẹn, giữ nguyên tem mác và bạn cần cung cấp video mở hộp làm bằng chứng.",
-    "expected_context": "returns_refund.md"
+    "question": "Khi nào thì mã giảm giá (voucher) sẽ được hoàn lại nếu đơn hàng bị hủy?",
+    "expected_answer": "Voucher thường được hoàn lại trong vòng 1-3 ngày làm việc nếu đơn hàng bị hủy bởi hệ thống hoặc người bán, với điều kiện voucher vẫn còn hiệu lực và chưa hết lượt sử dụng.",
+    "expected_context": "chinh-sach-chung-ve-ma-uu-dai-shopee-shopee-trung-tam-tro-giup.md"
   },
   {
-    "question": "Shopee sẽ làm gì với địa chỉ email và số điện thoại của tôi?",
-    "expected_answer": "Shopee thu thập thông tin này để phục vụ cho việc xử lý đơn hàng và cam kết không chia sẻ cho bên thứ ba vì mục đích thương mại mà không có sự đồng ý của bạn.",
-    "expected_context": "privacy_policy.md"
+    "question": "Làm sao để biết một mã ưu đãi áp dụng được cho sản phẩm nào?",
+    "expected_answer": "Bạn có thể nhấn vào nút Điều kiện áp dụng trên mỗi mã ưu đãi trong Ví Voucher để xem danh sách sản phẩm hoặc ngành hàng hợp lệ.",
+    "expected_context": "chinh-sach-chung-ve-ma-uu-dai-shopee-shopee-trung-tam-tro-giup.md"
   },
   {
-    "question": "Tôi có thể thay đổi địa chỉ giao hàng cho đơn hàng thanh toán bằng Apple Pay khi đơn đã được giao cho vận chuyển không?",
-    "expected_answer": "Không, nếu đơn hàng đã được giao cho đơn vị vận chuyển, bạn không thể thay đổi địa chỉ giao hàng, bất kể phương thức thanh toán là gì.",
-    "expected_context": "track_order.md, payment_methods.md"
+    "question": "Tôi mua một sản phẩm quốc tế nhưng thẻ tín dụng của tôi không hỗ trợ thanh toán quốc tế thì làm sao?",
+    "expected_answer": "Bạn có thể chọn phương thức thanh toán khác như Ví ShopeePay, chuyển khoản ngân hàng hoặc COD nếu Shop có hỗ trợ.",
+    "expected_context": "05-cross-border-purchase.md, 01-payment-methods.md"
   },
   {
-    "question": "Tôi có được phép đăng bán động vật hoang dã và yêu cầu khách thanh toán COD không?",
-    "expected_answer": "Không, động vật hoang dã nằm trong danh sách các mặt hàng cấm đăng bán trên sàn.",
-    "expected_context": "product_listing.md, payment_methods.md"
+    "question": "Sau khi đơn hàng đã được giao cho đơn vị vận chuyển, tôi muốn đổi phương thức thanh toán sang Apple Pay có được không?",
+    "expected_answer": "Không, bạn không thể thay đổi phương thức thanh toán khi đơn hàng đã chuyển sang trạng thái Đang giao.",
+    "expected_context": "02-change-payment-method.md, 03-track-order.md"
+  },
+  {
+    "question": "Nếu tôi mua đơn hàng quốc tế bằng thẻ tín dụng và yêu cầu trả hàng, tôi cần nộp bằng chứng gì và tiền sẽ hoàn về đâu?",
+    "expected_answer": "Bạn cần nộp video mở hộp, hình ảnh tình trạng hàng để chứng minh. Tiền sẽ được hoàn lại vào thẻ tín dụng bạn đã dùng để thanh toán.",
+    "expected_context": "04-refund-evidence.md, chinh-sach-tra-hang-va-hoan-tien-shopee-trung-tam-tro-giup.md, 01-payment-methods.md"
+  },
+  {
+    "question": "Để tối ưu hoa hồng tiếp thị liên kết (Affiliate), tôi tự đặt hàng bằng link của mình rồi hủy. Tôi có bị khóa tài khoản không?",
+    "expected_answer": "Có, đây là hành vi gian lận (tự mua qua link của mình) và Shopee sẽ khóa tài khoản Affiliate của bạn, đồng thời hủy toàn bộ hoa hồng.",
+    "expected_context": "chinh-sach-chong-hanh-vi-gian-lan-doi-voi-hoat-dong-tiep-thi-lien-ket-tren-san-thuong-mai-dien-tu-sh.md"
   }
 ]
