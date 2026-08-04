@@ -13,6 +13,22 @@ pinned: false
 
 **Chương 2 | Ngày 8 trong 15**
 
+---
+
+## 👥 Nhóm Thực Hiện
+
+| Họ và tên | MSSV | Role | Phụ trách |
+|---|---|---|---|
+| Bế Nguyễn Hà Sơn | 2A202601454 | Role 1 — Team Leader & RAG Architect | Task 9, kiến trúc, tích hợp |
+| Phạm Tung Dương | 2A202601404 | Role 2 — Data Engineering & Scraping | Task 1, 2, 3 |
+| Nguyễn Xuân Quân | 2A202601976 | Role 3 — Vector DB & Dense Search | Task 4, 5 |
+| Phạm Trung Hiếu | 2A202601834 | Role 4 — Sparse Retrieval & Fallback | Task 6, 7, 8 |
+| Nguyễn Thành Vinh | 2A202601556 | Role 5 — Frontend UI & Integration | Task 10, `app.py` |
+| Hồ Lương An | 2A202601332 | Role 6 — Evaluation & Benchmark QA | Golden dataset, RAGAS, báo cáo |
+
+📄 **Báo cáo nhóm đầy đủ:** [`group_project/README.md`](group_project/README.md)
+📊 **Kết quả đánh giá RAGAS:** [`group_project/evaluation/results.md`](group_project/evaluation/results.md)
+
 > Dùng chung chủ đề "E-commerce Policy / Customer Support" với biến thể K4 của Ngày 7 (`K4_VARIANT.md`), để pipeline Ngày 7 → Ngày 8 nhất quán.
 
 ---
